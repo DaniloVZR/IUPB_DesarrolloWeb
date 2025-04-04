@@ -1,0 +1,46 @@
+# Archivos de entorno
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Dependencias de Node
+node_modules/
+
+# Archivos de configuración de IDEs/Editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de compilación/bundling
+dist/
+build/
+coverage/
+
+# Archivos generados por el sistema
+*.pid
+*.seed
+*.pid.lock
+
+# Archivos de paquetes
+package-lock.json
+yarn.lock
+
+# Archivos de caché
+.cache/
+.temp/
