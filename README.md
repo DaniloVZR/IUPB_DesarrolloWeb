@@ -1,6 +1,6 @@
 Curso de Desarrollo Web
 
-Grupo 5:
+Grupo A:
 
 - Angelo Alexander Arango Graciano
 - Joimar Danilo Urrego David
