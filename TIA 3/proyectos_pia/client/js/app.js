@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnCrear = document.getElementById('btn-crear');
   const btnActualizar = document.getElementById('btn-actualizar');
   const btnEliminar = document.getElementById('btn-eliminar');
-  const usuarioForm = document.getElementById('proyecto-form');
+  const proyectoForm = document.getElementById('proyecto-form');
   const statusCodeElement = document.getElementById('status-code');
   const responseMessageElement = document.getElementById('response-message');
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Colores según el código de estado
     if (statusCode >= 200 && statusCode < 300) {
-      statusCodeElement.style.color = 'red';
+      statusCodeElement.style.color = 'green';
     } else if (statusCode >= 400 && statusCode < 500) {
       statusCodeElement.style.color = 'black';
     } else if (statusCode >= 500) {
@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const response = await fetch(baseUrl);
       const data = await response.json();
       showResponse(response.status, data);
+      proyectoForm.reset();
+
     } catch (error) {
       showResponse(500, { error: error.message });
     }
@@ -43,8 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
   btnCrear.addEventListener('click', async () => {
     const formData = new FormData(proyectoForm);
     const proyecto = {
+      id: formData.get('id'),
       codigo: formData.get('codigo'),
-      descripcion: formData.get('descripcion')
+      descripcion: formData.get('descripcion'),
+      abreviatura: formData.get('abreviatura'),
+      fecha_registro: formData.get('fecha-registro'),
     };
 
     try {
@@ -57,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       const data = await response.json();
       showResponse(response.status, data);
+      proyectoForm.reset();
+
     } catch (error) {
       showResponse(500, { error: error.message });
     }
@@ -73,8 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const proyecto = {
+      id: formData.get('id'),
       codigo: formData.get('codigo'),
-      descripcion: formData.get('descripcion')
+      descripcion: formData.get('descripcion'),
+      abreviatura: formData.get('abreviatura'),
+      fecha_registro: formData.get('fecha-registro'),
     };
 
     try {
@@ -87,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       const data = await response.json();
       showResponse(response.status, data);
+      proyectoForm.reset();
+
     } catch (error) {
       showResponse(500, { error: error.message });
     }
@@ -109,6 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       const data = await response.json();
       showResponse(response.status, data);
+      proyectoForm.reset();
+
     } catch (error) {
       showResponse(500, { error: error.message });
     }

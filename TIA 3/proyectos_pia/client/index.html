@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto</title>
+  <title>Proyectos</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -12,23 +12,17 @@
   <div class="container">
     <h1>Inscripción a proyectos</h1>
     <div class="panel">
-      <div class="controls">
-        <button id="btn-listar">Listar Proyectos (GET)</button>
-        <button id="btn-crear">Crear Proyectos (POST)</button>
-        <button id="btn-actualizar">Actualizar Proyectos (PUT)</button>
-        <button id="btn-eliminar">Eliminar Proyecto (DELETE)</button>
-      </div>
-
+      
       <div class="form-container">
         <h2>Formulario Tipo de Proyecto</h2>
-        <form id="usuario-form">
+        <form id="proyecto-form">
           <div class="form-group">
             <label for="id">ID:</label>
             <input type="number" id="id" name="id">
           </div>
           <div class="form-group">
-            <label for="nombre">Código:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo" name="codigo" required>
           </div>
           <div class="form-group">
             <label for="descripcion">Descripción:</label>
@@ -40,9 +34,16 @@
           </div>
           <div class="form-group">
             <label for="fecha-registro">Fecha de Registro:</label>
-            <input type="text" id="fecha-registro" name="fecha-registro" required>
+            <input type="date" id="fecha-registro" name="fecha-registro" required>
           </div>
         </form>
+      </div>
+
+      <div class="controls">
+        <button id="btn-listar">Listar Proyectos (GET)</button>
+        <button id="btn-crear">Crear Proyectos (POST)</button>
+        <button id="btn-actualizar">Actualizar Proyectos (PUT)</button>
+        <button id="btn-eliminar">Eliminar Proyecto (DELETE)</button>
       </div>
 
       <div class="response-container">

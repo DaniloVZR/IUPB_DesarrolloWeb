@@ -3,5 +3,5 @@ CREATE TABLE tipo_proyecto (
     codigo VARCHAR(8) UNIQUE NOT NULL,
     descripcion VARCHAR(100) NOT NULL,
     abreviatura VARCHAR(50) NOT NULL,
-    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    fecha_registro DATE NOT NULL
 );

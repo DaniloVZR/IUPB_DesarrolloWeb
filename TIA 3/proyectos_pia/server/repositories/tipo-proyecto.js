@@ -29,7 +29,7 @@ class proyectoRepository {
   async create(proyecto) {
     const { rows } = await db.query(
       'INSERT INTO tipo_proyecto (codigo, descripcion, abreviatura, fecha_registro) VALUES ($1, $2, $3, $4) RETURNING *',
-      [proyecto.codigo,proyecto.descripcion,proyecto.abreviatura,proyecto.fecha_ingreso]
+      [proyecto.codigo,proyecto.descripcion,proyecto.abreviatura,proyecto.fecha_registro]
     );
     const row = rows[0];
     return new tipoProyecto(
@@ -43,12 +43,12 @@ class proyectoRepository {
 
   async update(id, proyecto) {
     const { rows } = await db.query(
-      'UPDATE tipo_proyecto SET codigo = $1, descripcion = $2, abreviatura = $3, fecha_ingreso = $4 WHERE id = $5 RETURNING *',
+      'UPDATE tipo_proyecto SET codigo = $1, descripcion = $2, abreviatura = $3, fecha_registro = $4 WHERE id = '+id+' RETURNING *',
       [proyecto.codigo,proyecto.descripcion,proyecto.abreviatura,proyecto.fecha_registro]
     );
     if (rows.length === 0) return null;
     const row = rows[0];
-    return new Usuario(
+    return new tipoProyecto(
         row.id,
         row.codigo,
         row.descripcion,
