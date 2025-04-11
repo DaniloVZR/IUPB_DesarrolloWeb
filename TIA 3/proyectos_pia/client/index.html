@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Control de Piscinas</title>
+  <title>Proyecto</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <div class="container">
-    <h1>Inscripcion a proyectos</h1>
+    <h1>Inscripción a proyectos</h1>
     <div class="panel">
       <div class="controls">
         <button id="btn-listar">Listar Proyectos (GET)</button>
@@ -20,19 +20,27 @@
       </div>
 
       <div class="form-container">
-        <h2>Datos del Estudiante</h2>
+        <h2>Formulario Tipo de Proyecto</h2>
         <form id="usuario-form">
           <div class="form-group">
             <label for="id">ID:</label>
             <input type="number" id="id" name="id">
           </div>
           <div class="form-group">
-            <label for="nombre">Nombre:</label>
+            <label for="nombre">Código:</label>
             <input type="text" id="nombre" name="nombre" required>
           </div>
           <div class="form-group">
-            <label for="documento">Documento:</label>
-            <input type="text" id="documento" name="documento" required>
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" required>
+          </div>
+          <div class="form-group">
+            <label for="abreviatura">Abreviatura:</label>
+            <input type="text" id="abreviatura" name="abreviatura" required>
+          </div>
+          <div class="form-group">
+            <label for="fecha-registro">Fecha de Registro:</label>
+            <input type="text" id="fecha-registro" name="fecha-registro" required>
           </div>
         </form>
       </div>
