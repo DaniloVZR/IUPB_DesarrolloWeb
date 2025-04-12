@@ -4,33 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos</title>
+  <title>Gestión de Proyectos</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-    <h1>Inscripción a proyectos</h1>
+    <h1>Inscripción a Proyectos</h1>
     <div class="panel">
       
       <div class="form-container">
-        <h2>Formulario Tipo de Proyecto</h2>
+        <h2><i class="fas fa-clipboard-list"></i> Formulario Tipo de Proyecto</h2>
         <form id="proyecto-form">
           <div class="form-group">
             <label for="id">ID:</label>
-            <input type="number" id="id" name="id">
+            <input type="number" id="id" name="id" placeholder="Identificador único">
           </div>
           <div class="form-group">
             <label for="codigo">Código:</label>
-            <input type="text" id="codigo" name="codigo" required>
+            <input type="text" id="codigo" name="codigo" required placeholder="Ej. PROJ-001">
           </div>
           <div class="form-group">
             <label for="descripcion">Descripción:</label>
-            <input type="text" id="descripcion" name="descripcion" required>
+            <input type="text" id="descripcion" name="descripcion" required placeholder="Descripción breve del proyecto">
           </div>
           <div class="form-group">
             <label for="abreviatura">Abreviatura:</label>
-            <input type="text" id="abreviatura" name="abreviatura" required>
+            <input type="text" id="abreviatura" name="abreviatura" required placeholder="Ej. PRJ">
           </div>
           <div class="form-group">
             <label for="fecha-registro">Fecha de Registro:</label>
@@ -40,14 +43,14 @@
       </div>
 
       <div class="controls">
-        <button id="btn-listar">Listar Proyectos (GET)</button>
-        <button id="btn-crear">Crear Proyectos (POST)</button>
-        <button id="btn-actualizar">Actualizar Proyectos (PUT)</button>
-        <button id="btn-eliminar">Eliminar Proyecto (DELETE)</button>
+        <button id="btn-listar"><i class="fas fa-list"></i> Listar Proyectos</button>
+        <button id="btn-crear"><i class="fas fa-plus"></i> Crear Proyecto</button>
+        <button id="btn-actualizar"><i class="fas fa-sync-alt"></i> Actualizar Proyecto</button>
+        <button id="btn-eliminar"><i class="fas fa-trash-alt"></i> Eliminar Proyecto</button>
       </div>
 
       <div class="response-container">
-        <h2>Respuesta del Servidor</h2>
+        <h2><i class="fas fa-server"></i> Respuesta del Servidor</h2>
         <div class="status-code">Código HTTP: <span id="status-code">---</span></div>
         <pre id="response-message">Esperando operación...</pre>
       </div>
